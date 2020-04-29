@@ -32,7 +32,8 @@ public class Startup {
     @PostConstruct
     public void init(){
        ur.save(new Users("john","john@gmail.com","123","ROLE_USER",true));
-       ps.save(new Product(new Long(1), "Blue Denims", 2500.0,6,"Clothing"));
+        ur.save(new Users("fred","fred@gmail.com","123","ROLE_ADMIN",true));
+       /*ps.save(new Product(new Long(1), "Blue Denims", 2500.0,6,"Clothing"));
        ps.save(new Product(new Long(2), "White Shirt", 2700.0,12,"Clothing"));
        ps.save(new Product(new Long(3), "Kurta", 1200.0,4,"Clothing"));
        ps.save(new Product(new Long(4), "Hat", 500.0,18,"Accessories"));
@@ -65,6 +66,6 @@ public class Startup {
        set4.add(new OrderdProducts(2, "White Shirt",2700.0 ,"Clothing",2));
        set4.add(new OrderdProducts(3, "Kurta",1200.0 ,"Clothing",2));
        Orders orders4=new Orders(3, new Date(),6400.0,"U",set4);
-       os.save(orders4);
+       os.save(orders4);*/
     }
 }
