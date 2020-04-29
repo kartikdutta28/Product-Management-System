@@ -32,7 +32,7 @@ public class Startup {
     @PostConstruct
     public void init(){
        ur.save(new Users(1,"john","john@gmail.com","123","ROLE_USER",true));
-        ur.save(new Users(2,"fred","fred@gmail.com","123","ROLE_ADMIN",true));
+       ur.save(new Users(2,"fred","fred@gmail.com","123","ROLE_ADMIN",true));
        ps.save(new Product(new Long(1), "Blue Denims", 2500.0,6,"Clothing"));
        ps.save(new Product(new Long(2), "White Shirt", 2700.0,12,"Clothing"));
        ps.save(new Product(new Long(3), "Kurta", 1200.0,4,"Clothing"));
@@ -46,26 +46,26 @@ public class Startup {
        set.add(new OrderdProducts(2, "White Shirt",2700.0 ,"Clothing",2));
        set.add(new OrderdProducts(3, "Kurta",1200.0 ,"Clothing",1));
        set.add(new OrderdProducts(4, "Hat",500.0 ,"Accessories",2));
-       Orders orders=new Orders(2, new Date(),6900.0,"U",set);
+       Orders orders=new Orders(1, new Date(),6900.0,"U",set);
        os.save(orders);
        Set<OrderdProducts>set2=new HashSet<OrderdProducts>();
        set2.add(new OrderdProducts(1, "Blue Denims",2500.0 ,"Clothing",4));
        set2.add(new OrderdProducts(2, "White Shirt",2700.0 ,"Clothing",5));
        set2.add(new OrderdProducts(6, "Disney T-Shirts",1700.0 ,"Merchandise",2));
        set2.add(new OrderdProducts(3, "Kurta",1200.0 ,"Clothing",2));
-       Orders orders2=new Orders(2, new Date(),6400.0,"U",set2);
+       Orders orders2=new Orders(1, new Date(),6400.0,"U",set2);
        os.save(orders2);
        Set<OrderdProducts>set3=new HashSet<OrderdProducts>();
        set3.add(new OrderdProducts(1, "Blue Denims",2500.0 ,"Clothing",1));
        set3.add(new OrderdProducts(2, "White Shirt",2700.0 ,"Clothing",1));
        set3.add(new OrderdProducts(3, "Kurta",1200.0 ,"Clothing",1));
-       Orders orders3=new Orders(3, new Date(),6400.0,"U",set3);
+       Orders orders3=new Orders(1, new Date(),6400.0,"U",set3);
        os.save(orders3);
        Set<OrderdProducts>set4=new HashSet<OrderdProducts>();
        set4.add(new OrderdProducts(1, "Blue Denims",2500.0 ,"Clothing",1));
        set4.add(new OrderdProducts(2, "White Shirt",2700.0 ,"Clothing",2));
        set4.add(new OrderdProducts(3, "Kurta",1200.0 ,"Clothing",2));
-       Orders orders4=new Orders(3, new Date(),6400.0,"U",set4);
+       Orders orders4=new Orders(1, new Date(),6400.0,"U",set4);
        os.save(orders4);
     }
 }
