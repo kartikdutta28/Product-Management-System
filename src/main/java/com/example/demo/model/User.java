@@ -16,7 +16,14 @@ public class User {
 	String role;
 	boolean active;
 	
-	
+	public User(String username, String email, String password, String role, boolean active){
+		super();
+		this.username = username;
+		this.email = email;
+		this.password = password;
+		this.role = role;
+		this.active = active;
+	}
 	public User(int id,String username, String email, String password, String role, boolean active) {
 		super();
 		this.id = id;
