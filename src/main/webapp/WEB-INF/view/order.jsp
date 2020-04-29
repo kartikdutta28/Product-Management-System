@@ -2,7 +2,7 @@
 <%@ page import="com.example.demo.model.Orders" %>
 <%@ page import="com.example.demo.model.OrderdProducts" %>
 <%@ page import="java.util.Set" %>
-<%@ page import="com.example.demo.model.User" %>
+<%@ page import="com.example.demo.model.Users" %>
 <%@ page import="java.util.Optional" %>
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
          pageEncoding="ISO-8859-1"%>
@@ -21,8 +21,8 @@
             <div class="col"></div>
                 <div class="col-8 border-info card shadow-lg p-3 mb-4 bg-white rounded time-right">
                     <% Orders order = (Orders) request.getAttribute("order");%>
-                    <% Optional<User> user=(Optional<User>)request.getAttribute("user");%>
-                    <%User u=user.get();%>
+                    <% Optional<Users> user=(Optional<Users>)request.getAttribute("user");%>
+                    <%Users u=user.get();%>
                     <div class="card-body">
                         <h5 class="card-title">Ordered By :</h5>
                         <h5 class="card-title">User Mail : <%=u.getEmail()%></h5>
