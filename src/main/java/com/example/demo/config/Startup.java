@@ -1,7 +1,9 @@
 package com.example.demo.config;
 
-import com.example.demo.dao.UserRepository;
-import com.example.demo.model.User;
+import com.example.demo.dao.UsersRepository;
+import com.example.demo.dao.UsersRepository;
+import com.example.demo.model.Users;
+import com.example.demo.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -26,10 +28,10 @@ public class Startup {
     private OrderService os;
 
     @Autowired
-    private UserRepository us;
+    private UsersRepository ur;
     @PostConstruct
     public void init(){
-       us.save(new User("john","john@gmail.com","123","ROLE_USER",true));
+       ur.save(new Users("john","john@gmail.com","123","ROLE_USER",true));
        ps.save(new Product(new Long(1), "Blue Denims", 2500.0,6,"Clothing"));
        ps.save(new Product(new Long(2), "White Shirt", 2700.0,12,"Clothing"));
        ps.save(new Product(new Long(3), "Kurta", 1200.0,4,"Clothing"));

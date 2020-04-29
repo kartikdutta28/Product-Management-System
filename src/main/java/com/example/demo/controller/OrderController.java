@@ -7,8 +7,8 @@ import javax.persistence.criteria.Order;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
-import com.example.demo.dao.UserRepository;
-import com.example.demo.model.User;
+import com.example.demo.dao.UsersRepository;
+import com.example.demo.model.Users;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -26,7 +26,7 @@ public class OrderController {
 	@Autowired
 	OrderService os;
 	@Autowired
-	UserRepository ur;
+	UsersRepository ur;
 
 	@RequestMapping("/viewOrders")
 	public ModelAndView adminHome() {
@@ -52,7 +52,7 @@ public class OrderController {
 	public ModelAndView showOrder(@RequestParam("id")int id,@RequestParam("uid")int uid){
 		ModelAndView mv=new ModelAndView("order");
 		Orders orders=os.findById(id);
-		Optional<User> user=ur.findById(id);
+		Optional<Users> user=ur.findById(id);
 		mv.addObject("order",orders);
 		mv.addObject("user",user);
 		return  mv;

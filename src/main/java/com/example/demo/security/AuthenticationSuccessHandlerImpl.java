@@ -21,7 +21,7 @@ public class AuthenticationSuccessHandlerImpl implements AuthenticationSuccessHa
     @Autowired HttpSession session; //autowiring session
 
     @Autowired
-    com.example.demo.dao.UserRepository repository; //autowire the user repo
+    com.example.demo.dao.UsersRepository repository; //autowire the user repo
 
 
     private static final Logger logger = LoggerFactory.getLogger(AuthenticationSuccessHandlerImpl.class);

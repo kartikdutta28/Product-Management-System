@@ -1,10 +1,11 @@
 package com.example.demo.security;
 
+import com.example.demo.model.Users;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-import com.example.demo.model.User;
+import com.example.demo.model.Users;
 
 import java.util.Arrays;
 import java.util.Collection;
@@ -28,7 +29,7 @@ public class MyUserDetails implements UserDetails {
 
 	private List<GrantedAuthority> authorities;
 
-    public MyUserDetails(User user){
+    public MyUserDetails(Users user){
         this.username=user.getUsername();
         this.password=user.getPassword();
         this.active=user.isActive();
