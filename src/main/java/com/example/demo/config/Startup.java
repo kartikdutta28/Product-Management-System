@@ -31,8 +31,8 @@ public class Startup {
     private UsersRepository ur;
     @PostConstruct
     public void init(){
-       ur.save(new Users("john","john@gmail.com","123","ROLE_USER",true));
-        ur.save(new Users("fred","fred@gmail.com","123","ROLE_ADMIN",true));
+       ur.save(new Users(1,"john","john@gmail.com","123","ROLE_USER",true));
+        ur.save(new Users(2,"fred","fred@gmail.com","123","ROLE_ADMIN",true));
        /*ps.save(new Product(new Long(1), "Blue Denims", 2500.0,6,"Clothing"));
        ps.save(new Product(new Long(2), "White Shirt", 2700.0,12,"Clothing"));
        ps.save(new Product(new Long(3), "Kurta", 1200.0,4,"Clothing"));
