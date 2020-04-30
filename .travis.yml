@@ -9,13 +9,22 @@
 #  - mvn -N io.takari:maven:wrapper
 #  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
-git:
-  depth: 3
+#git:
+#  depth: 3
+#language: java
+#jdk:
+#  - oraclejdk9
+#before_install:
+#  - chmod +x mvnw
+#install:
+#  - mvn -N io.takari:maven:wrapper
+#  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
 language: java
 jdk:
-  - oraclejdk9
-before_install:
-  - chmod +x mvnw
-install:
-  - mvn -N io.takari:maven:wrapper
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+  - oraclejdk8
+deploy:
+  provider: heroku
+  api-key:
+    secure: $HEROKU_API_KEY
+  app: spring-pms
