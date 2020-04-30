@@ -52,7 +52,9 @@ public class OrderController {
 	public ModelAndView showOrder(@RequestParam("id")int id,@RequestParam("uid")int uid){
 		ModelAndView mv=new ModelAndView("order");
 		Orders orders=os.findById(id);
-		Optional<Users> user=ur.findById(id);
+		Optional<Users> user=ur.findById(uid);
+		Users u=user.get();
+		System.out.println(u.getEmail());
 		mv.addObject("order",orders);
 		mv.addObject("user",user);
 		return  mv;

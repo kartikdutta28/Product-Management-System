@@ -18,6 +18,7 @@
 		<div class="row">
 			<div class="col"></div>
 			<div class="col-10">
+				<%@ include file="../includes/msg.jsp" %>
 				<div class="jumbotron">
 					<h1 class="display-4">Shopping Web App</h1>
 					<p class="lead">This is a simple shopping web app example made via spring boot jpa and h2.</p>

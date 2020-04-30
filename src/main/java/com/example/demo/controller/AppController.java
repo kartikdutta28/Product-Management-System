@@ -9,6 +9,7 @@ import com.example.demo.dao.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
@@ -33,7 +34,23 @@ public class AppController {
 		mv.addObject("pList",pList);
 		return mv;
 	}
+	@GetMapping("/register")
+	public ModelAndView registerForm(){
+		ModelAndView modelAndView=new ModelAndView("registerForm");
+		modelAndView.addObject("users",new Users());
+		return modelAndView;
 
+	}
+	@PostMapping("/register")
+	public String register(Users users,HttpServletRequest request){
+		users.setActive(true);
+		users.setRole("ROLE_USER");
+		ur.save(users);
+		request.getSession(false).setAttribute("msg","You have been successfully registered please log in");
+		request.getSession(false).setAttribute("class","alert-success");
+		return "redirect:/";
+
+	}
 	@GetMapping("/all")
 	public List<Product>all(){
 		return (List<Product>) pr.findAll();
