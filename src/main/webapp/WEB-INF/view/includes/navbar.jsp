@@ -10,6 +10,9 @@
 		<li class="nav-item active">
 			<a class='nav-link text-white' href='/login'>Login</a>
 		</li>
+			<li class="nav-item active">
+				<a class='nav-link text-white' href='/register'>Register</a>
+			</li>
 		</sec:authorize>
       <li class="nav-item active">
         <a class="nav-link text-white" href="/tempUserHome">Home <span class="sr-only">(current)</span></a>
@@ -24,8 +27,6 @@
     </ul>
     <ul class="navbar-nav ml-auto">
 		<sec:authorize access="isAuthenticated()">
-		<%
-			if(session.getAttribute("userId")!=null){%>
 		<li class="nav-item dropdown">
 			<a  class="nav-link btn btn-outline-dark mr-2 dropdown-toggle bg-dark text-white" href="#" id="navbarDropdown" role="button"
 				data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><%=session.getAttribute("userMail")%></a>
@@ -33,7 +34,6 @@
 				<a class="dropdown-item" href="/logout">Logout</a>
 			</div>
 		</li>
-		<%}%>
 		</sec:authorize>
 		<%
   		if(session.getAttribute("userId")!=null){
