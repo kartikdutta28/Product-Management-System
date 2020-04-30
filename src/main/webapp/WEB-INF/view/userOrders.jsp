@@ -42,7 +42,11 @@
   			<tbody>
   			<c:forEach items="${oList}" var="orders">
   			<tr>
-  				<td><c:out value="${orders.id}"/></td>
+  				<td>
+					<a href="/order?id=<c:out value="${orders.id}"/>&uid=<c:out value="${orders.customerId}"/>">
+						<c:out value="${orders.id}"/>
+					</a>
+				</td>
   				<td><c:out value="${orders.customerId}"/></td>
   				<td><c:out value="${orders.date}"/></td>
   				<c:choose> 

@@ -13,7 +13,7 @@
     });
     $(function () {
         $('[data-toggle="popover"]').popover()
-    })
+    });
 </script>
 <script src="/js/bootstrap.min.js"></script><br/><br/>
 <footer class="footer fixed-bottom py-3 bg-secondary text-center">

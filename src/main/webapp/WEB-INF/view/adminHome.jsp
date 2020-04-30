@@ -10,6 +10,7 @@
 <title>Product Management System</title>
 	<%--<%@ include file="includes/style.jsp" %>--%>
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.css">
 </head>
 <body>
 <%@ include file="includes/adnavbar.jsp" %>
@@ -18,7 +19,7 @@
 		<div class="row">
 			<div class="col"></div>
 			<div class="col-8">
-				<table class="table table-hover">
+				<table id="myTable" class="table table-hover">
 					<thead>
 					<tr>
 						<th>Product ID</th>
