@@ -13,10 +13,12 @@
 -   H2 In-memory Database
 -   JSTL core
 
-### Login credentials
-#### For normal User
-##### username - rick25
-##### password - 123
-#### For admin
-##### username - john
-##### password - 123
+## Login Details
+
+#### Customer(Normal User)
+Username: rick25
+Password: 123
+
+#### Admin
+Username: john
+Password: 123
