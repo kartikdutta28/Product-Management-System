@@ -2,20 +2,35 @@
 #jdk: oraclejdk9
 
 #language: java
-jdk:
-  - oraclejdk9
+#jdk:
+#  - oraclejdk9
 # git strips the wrapper jar file so we have to force its download during the build
 #install:
 #  - mvn -N io.takari:maven:wrapper
 #  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
 
-git:
-  depth: 3
-language: java
-jdk:
-  - oraclejdk9
-before_install:
-  - chmod +x mvnw
-install:
-  - mvn -N io.takari:maven:wrapper
-  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+#git:
+#  depth: 3
+#language: java
+#jdk:
+#  - oraclejdk9
+#before_install:
+#  - chmod +x mvnw
+#install:
+#  - mvn -N io.takari:maven:wrapper
+#  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+#language: java
+#jdk:
+#  - oraclejdk9
+#before_install:
+#  - chmod +x mvnw
+#install:
+#  - mvn -N io.takari:maven:wrapper
+#  - ./mvnw install -DskipTests=true -Dmaven.javadoc.skip=true -B -V
+
+#deploy:
+#  provider: heroku
+#  api-key:
+#    secure: $HEROKU_API_KEY
+#  app: spring-pms

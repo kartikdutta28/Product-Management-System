@@ -70,11 +70,11 @@
 			<artifactId>spring-security-taglibs</artifactId>
 			<version>5.2.2.RELEASE</version>
 		</dependency>
-		<!--<dependency>
+		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
-		</dependency>-->
+		</dependency>
 		<dependency>
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-jdbc</artifactId>
