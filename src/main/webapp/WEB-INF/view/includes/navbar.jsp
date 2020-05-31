@@ -28,11 +28,9 @@
         >
       </li>
       <li class="nav-item active">
-        <% if(session.getAttribute("userId")!=null){ out.println("<a
-          class="nav-link text-white"
-          href="/userOrders"
-          >View Orders</a
-        >"); } %>
+        <% if(session.getAttribute("userId")!=null){
+        out.println("<a class='nav-link text-white' href='/userOrders'>View Orders</a>");
+        } %>
       </li>
     </ul>
     <ul class="navbar-nav ml-auto">
@@ -53,15 +51,13 @@
           </div>
         </li>
       </sec:authorize>
-      <% if(session.getAttribute("userId")!=null){ out.println("
-      <li>
-        "); out.println("<button type="button" class="btn btn-primary">
-          "); out.println("Cart
-          <span id="result" class="badge badge-light"></span>");
-          out.println("<span class="sr-only">unread messages</span></button
-        >"); out.println("
-      </li>
-      "); } %>
+      <% if(session.getAttribute("userId")!=null){
+      out.println("<li>");
+      out.println("<button type='button' class='btn btn-primary'>");
+      out.println("Cart <span id='result' class='badge badge-light'></span>");
+      out.println("<span class='sr-only'>unread messages</span></button>");
+      out.println("</li>");
+      } %>
     </ul>
   </div>
 </nav>
